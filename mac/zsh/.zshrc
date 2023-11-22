@@ -1,9 +1,26 @@
 # alias startup
+## files
 alias la='ls -la'
 alias lt='ls -lt'
+## workspace
+alias yqzpc='cd /Users/xuhao/Desktop/code/web/pc_worker_ts'
+alias yqzrn='cd /Users/xuhao/Desktop/code/app/rn_worker_new'
+## ssh
+alias ssht1='ssh timon@192.168.88.8'
+alias ssht2='ssh timon@192.168.88.88' 
+## git
+alias gd='git diff'
+alias gds='git diff --staged'
+alias ga='git add'
+alias gl='git pull'
+alias gp='git push'
+alias gc='git commit'
+alias gst="git status -sb"
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(green)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -- | less"
 # alias end 
 
-
+# custom params start 
+# custom params end 
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
