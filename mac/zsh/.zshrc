@@ -1,19 +1,29 @@
 # alias startup
+## pnpm
+alias pnrd='pnpm run dev'
+alias pni='pnpm run install'
 ## files
 alias la='ls -la'
 alias lt='ls -lt'
 ## workspace
 alias yqzpc='cd /Users/xuhao/Desktop/code/web/pc_worker_ts'
+alias yqzpcdev='cd /Users/xuhao/Desktop/code/web/pc_worker_ts;pnpm run dev;'
+alias yqzrndev='cd /Users/xuhao/Desktop/code/app/rn_worker_new; yarn ios dev;'
 alias yqzrn='cd /Users/xuhao/Desktop/code/app/rn_worker_new'
+alias yqzprivate='cd /Users/xuhao/Desktop/code/private;'
+alias yqztry='cd /Users/xuhao/Desktop/code/try;'
+alias exprivate='cd /Users/xuhao/Desktop/code/private'
+## proxy
+alias proxy='export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890'
 ## ssh
 alias ssht1='ssh timon@192.168.88.8'
-alias ssht2='ssh timon@192.168.88.88' 
+alias ssht2='ssh timon@192.168.88.88'
 ## git
 alias gd='git diff'
 alias gds='git diff --staged'
 alias ga='git add'
-alias gl='git pull'
-alias gp='git push'
+alias gpull='git pull'
+alias gpush='git push'
 alias gc='git commit'
 alias gst="git status -sb"
 alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(green)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -- | less"
@@ -133,7 +143,6 @@ source $ZSH/oh-my-zsh.sh
 
 
 export PATH="$PATH:/usr/local/bin"
-export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 
 # bun completions
 [ -s "/Users/xuhao/.bun/_bun" ] && source "/Users/xuhao/.bun/_bun"
@@ -141,3 +150,11 @@ export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/xuhao/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
