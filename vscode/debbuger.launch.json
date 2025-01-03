@@ -1,0 +1,20 @@
+{
+  "vite": {
+    "type": "node",
+    "request": "launch",
+    "name": "Debug Vite Plugin",
+    "program": "${workspaceFolder}/node_modules/vite/bin/vite.js",
+    "cwd": "${workspaceFolder}",
+    "sourceMaps": true,
+    "smartStep": true,
+    "skipFiles": ["<node_internals>/**"],
+    "console": "integratedTerminal"
+  },
+  "chrome": {
+    "name": "Launch Chrome",
+    "request": "launch",
+    "type": "chrome",
+    "url": "http://localhost:5500",
+    "webRoot": "${workspaceFolder}"
+  }
+}
